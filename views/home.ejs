@@ -1,0 +1,20 @@
+
+<%- include("partials/header"); -%>
+    <h1>HOME</h1>
+    <h4> <%= startingContent %> </h4>
+    <h4>click compose to start creating notes</h4>
+
+
+  <%  posts.forEach(function(post){ %>
+
+    <h1 style="text-transform: uppercase;"><%=post.title%></h1>
+    <h4>
+    <%=post.content.substring(0, 100) + " ..."%>
+    <a href="/posts/<%=post.title%>">Read More</a>
+    </h4>
+
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>

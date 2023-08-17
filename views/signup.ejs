@@ -1,0 +1,45 @@
+<%- include("partials/header"); -%>
+<div class="col-sm-6 col-sm-offset-3">
+    <h1><span class="fa fa-sign-in"></span> Signup</h1>
+    <h4> <%= signup  %> </h4>
+    <form action="/signup" method="post">
+	    <div class="form-group">
+        <label class="clr">First Name</label>
+        <input type="text" class="form-control" name="firstname" style="font-size: medium;">
+      </div>
+      <div class="form-group">
+        <label class="clr">Last Name</label>
+        <input type="text" class="form-control" name="lastname" style="font-size: medium;">
+      </div>
+      <div class="form-group">
+            <label class="clr">Email</label>
+            <input type="text" class="form-control" name="email" style="font-size: medium;">
+        </div>
+        <div class="form-group">
+            <label class="clr">Password</label>
+	    <input type="password" class="form-control" name="password" style="font-size: medium;">
+      <i class="bi bi-eye-slash" id="togglePassword"></i>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="font-size: medium;">Signup</button>
+    </form>
+
+    <hr>
+
+    <h4>Already have an account? <a href="/login" class="clr1">Login</a></h4>
+    <h4>Or go <a href="/" class="clr1">home</a>.</h4>
+
+</div>
+<script>
+	$(".toggle-password").click(function() {
+
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+    </script>
+<%- include("partials/footer"); -%>
