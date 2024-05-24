@@ -2,8 +2,13 @@
 </div>
 <div class="footer-padding"></div>
   <div class="footer">
-    <p>&#169 2023 Lokesh, Inc. All Rights Reserved</p>
+    <p>&#169 <span id="year" ></span> Lokesh, Inc. All Rights Reserved</p>
   </div>
 </body>
 </div>
+<script>
+var currentDate = new Date();
+var year = currentDate.getFullYear();
+document.getElementById("year").textContent = year;
+</script>
 </html>
