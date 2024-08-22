@@ -1,1 +1,1 @@
-check website here : https://lokesh-notepad.azurewebsites.net/
+check website here : http://lokesh-notepad.azurewebsites.net/
